@@ -5,7 +5,8 @@ import {
   View,
   Image,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from "react-native";
 
 import options from "../../../assets/options.png";
@@ -111,13 +112,13 @@ function Feed() {
     );
   }
   return (
-    <View>
+    <SafeAreaView>
       <FlatList
         data={posts}
         keyExtractor={item => item.id}
         renderItem={renderItem}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
